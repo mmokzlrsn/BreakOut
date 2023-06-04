@@ -6,14 +6,26 @@ public abstract class Block : MonoBehaviour
 {
     private int _hp;
 
-    public int Hp { get => _hp; set => _hp = value; }
+    public int HP { get => _hp; set => _hp = value; }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag(Tags.BallTag))
         {
-
+            TakeDamage(collision.gameObject.GetComponent<Ball>().Damage);
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        _hp -= damage;
+        CheckForDestroy();
+    }
+
+    public void CheckForDestroy()
+    {
+        if(_hp <= 0)
+            Destroy(gameObject);
     }
 
 }

@@ -9,6 +9,11 @@ public class BallMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LaunchBall();
+    }
+
+    public void LaunchBall()
+    {
         _rb.AddForce(Vector2.down * _forcePower, ForceMode2D.Impulse);
     }
      

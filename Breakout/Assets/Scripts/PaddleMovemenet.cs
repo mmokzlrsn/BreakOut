@@ -31,6 +31,7 @@ public class PaddleMovemenet : MonoBehaviour
     void Movement()
     {
         _rb.velocity = new Vector2(_moveDirection, 0) * _speed;
-        transform.position = new Vector2( Mathf.Clamp(transform.position.x, xMin, xMax) , transform.position.y);
+         
+        //transform.position = new Vector2( Mathf.Clamp(transform.position.x, xMin, xMax) , transform.position.y);
     }
 }
