@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2065764928194213997}
   - component: {fileID: 2065764928194213996}
   - component: {fileID: 2065764928194213999}
-  - component: {fileID: 2065764928194214002}
+  - component: {fileID: 1486217016049234172}
   m_Layer: 0
-  m_Name: DefaultBlock
+  m_Name: UnbreakableBlock
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2065764928194214002
+--- !u!114 &1486217016049234172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2065764928194213998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac04dfd7c20723542b58ce230dd37dbf, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3e795c0cd9c7941b6713e11f059ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 1

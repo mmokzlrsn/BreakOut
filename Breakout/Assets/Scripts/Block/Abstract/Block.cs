@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Block : MonoBehaviour
 {
-    private int _hp;
+    [SerializeField] private int _hp;
 
     public int HP { get => _hp; set => _hp = value; }
 
@@ -16,7 +16,7 @@ public abstract class Block : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         _hp -= damage;
         CheckForDestroy();

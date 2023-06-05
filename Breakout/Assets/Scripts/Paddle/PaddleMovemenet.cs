@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PaddleMovemenet : MonoBehaviour
 {
-    float _speed = 5f;
+    float _speed = 12;
     float _moveDirection;
     [SerializeField] Rigidbody2D _rb;  
     private float xMin = -4f, xMax = 4f;
