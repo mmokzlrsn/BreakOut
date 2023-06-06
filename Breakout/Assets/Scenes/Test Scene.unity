@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 287607569}
   - component: {fileID: 287607568}
   - component: {fileID: 287607567}
+  - component: {fileID: 287607572}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Paddle
@@ -381,6 +382,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &287607572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287607566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5572e9895e264ce4cb111b1a048696ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &700088301
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,6 +979,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1203347447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203347449}
+  - component: {fileID: 1203347448}
+  m_Layer: 0
+  m_Name: PowerUpManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1203347448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203347447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2743a5aeef812a04dabb2d28e182addb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ball: {fileID: 978015079}
+  _paddle: {fileID: 287607572}
+--- !u!4 &1203347449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203347447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1255624682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,14 +1180,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockTypes:
   - blockPrefab: {fileID: 2065764928194214002, guid: 522a4ffc72693b5418cd239986ee7a55, type: 3}
-    weight: 5
+    weight: 0
   - blockPrefab: {fileID: 7320955870418564636, guid: 70733892db5a9ff4d98716c467c6d099, type: 3}
-    weight: 3
+    weight: 0
   - blockPrefab: {fileID: 1486217016049234172, guid: e71c700d0abed2247a522e8f949740fb, type: 3}
+    weight: 0
+  - blockPrefab: {fileID: 2065764928194214002, guid: c0d7ef44a11a63c478f5c32ffb73a3bc, type: 3}
     weight: 1
   _spawnedBlocks: []
-  _rowCount: 10
-  _columnCount: 8
+  _rowCount: 1
+  _columnCount: 1
 --- !u!4 &1896574027
 Transform:
   m_ObjectHideFlags: 0
