@@ -1,8 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
 public class BlockType
 {
-    public Block blockPrefab;
-    public int weight;
+    public Block BlockPrefab;
+    public int Weight;
+    
+ 
 }

@@ -26,7 +26,7 @@ public class BlockSpawnManager : MonoBehaviour
         int totalWeight = 0;
         foreach (BlockType blockType in blockTypes)
         {
-            totalWeight += blockType.weight;
+            totalWeight += blockType.Weight;
         }
 
         for (int i = 0; i < _rowCount; i++)
@@ -38,7 +38,7 @@ public class BlockSpawnManager : MonoBehaviour
 
                 foreach (BlockType blockType in blockTypes)
                 {
-                    randomWeight -= blockType.weight;
+                    randomWeight -= blockType.Weight;
                     if (randomWeight < 0)
                     {
                         selectedBlockType = blockType;
@@ -48,7 +48,7 @@ public class BlockSpawnManager : MonoBehaviour
 
                 if (selectedBlockType != null)
                 { 
-                    Block block = Instantiate(selectedBlockType.blockPrefab);
+                    Block block = Instantiate(selectedBlockType.BlockPrefab);
                     block.transform.SetParent(gameObject.transform);
                     _spawnedBlocks.Add(block);
                 }
